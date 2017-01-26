@@ -1,0 +1,1 @@
+"use strict";App({onLaunch:function(){console.log("onLaunch")},onShow:function(){console.log("onShow")},onHide:function(){console.log("onHide")},onError:function(o){console.log(o)},globalFunc:{drawStar:function(o){var n=Math.round(o/5),l=[];return l.length=n,l}},globalData:{load:"正在加载.."}});

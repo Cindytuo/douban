@@ -1,0 +1,80 @@
+
+<view id="list">
+    <view id="showing">
+        <view class="button-container">
+            <text class="show-title large-text">正在热映</text>
+            <button plain="{{true}}">
+                <image class="arrow-right" mode="aspectFill">
+            </button>
+        </view>
+        <view class="show-container list-view-container flex-horizontal-between">
+            <block wx:for="{{showing}}" wx:key="*this" wx:for-index="index">
+                <view class="show-item" bindtap="flow" id="{{item.id}}" data-name="show-item">
+                    <text class="subject-id none">{{item.id}}</text>
+                    <image src="{{item.images.medium}}"></image>
+                    <view class="show-name small-text text-center center">{{item.title}}</view>
+                    <view class="show-star"></view>
+                    <button size="{{mini}}" data-name="show-btn">选座购票</button>
+                </view>
+            </block>
+        </view>
+    </view>
+    <view id="hoting">
+        <view class="button-container">
+            <text class="show-title large-text">近期热门</text>
+            <button plain="{{true}}">
+                <image class="arrow-right" mode="aspectFill">
+            </button>
+        </view>
+        <view class="hot-container list-view-container flex-horizontal-between">
+            <block wx:for="{{hoting}}" wx:key="*this" wx:for-index="index">
+                <view class="hot-item" id="{{item.id}}" data-name="show-item" bindtap="flow">
+                    <image src="{{item.images.medium}}"></image>
+                    <view class="hot-name small-text text-center center">{{item.title}}</view>
+                </view>
+            </block>
+        </view>
+    </view>
+    <view id="doulist">
+        <view class="button-container">
+            <text class="show-title large-text">热门豆列</text>
+            <button plain="{{true}}">
+                <image class="arrow-right" mode="aspectFill">
+            </button>
+        </view>
+        <view class="dou-container list-view-container null">
+            <text class="text-center center small-text">目前还没有内容</text>
+        </view>
+    </view>
+    <view id="popular">
+        <view class="button-container">
+            <text class="show-title large-text">最受欢迎的影评</text>
+            <button plain="{{true}}">
+                <image class="arrow-right" mode="aspectFill">
+            </button>
+        </view>
+        <view class="pop-container list-view-container flex-direction-col">
+            <block wx:for="{{popular}}" wx:key="*this" wx:for-index="index">
+                <view class="pop-item">
+                    <view class="pop-item-flex flex-horizontal-around">
+                        <image src="{{item.subject.images.medium}}"></image>
+                        <view class="pop-text">
+                            <text class="pop-title large-text">{{item.head}}</text>
+                            <text class="pop-des small-text">{{item.body}}</text>
+                        </view>
+                    </view>
+                    <view class="pop-review">
+                        <text class="pop-user small-text">{{item.user}} 评论</text>
+                        <text class="pop-target small-text">《{{item.subject.title}}》</text>
+                        <text class="pop-star">＊＊＊＊＊</text>
+                    </view>
+                </view>
+            </block>
+        </view>
+    </view>
+    <view id="advertise">
+        <view class="advertise-container">
+            <image src="https://img3.doubanio.com/view/dale-online/dale_ad/public/b365d035321a541.jpg"></image>
+        </view>
+    </view>
+</view>
