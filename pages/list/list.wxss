@@ -1,0 +1,141 @@
+@import "../../components/components.wxss";
+
+#list {
+  background: #f2f2f2;
+}
+
+.list-view-container {
+  display: flex;
+  width: 95%;
+  margin: 0 auto;
+  background: #fff;
+  padding: 10px 0 25px 0;
+  border-radius: 5px;
+}
+
+.button-container {
+  display: flex;
+  align-item: center;
+  justify-content: space-between;
+  padding: 15px 5px 10px;
+}
+
+.button-container button {
+  border: 0;
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+}
+
+.show-item {
+  flex: 1 1 auto;
+}
+
+.show-item image {
+  display: block;
+  width: 70%;
+  height: 100px;
+  margin: 0 auto;
+  padding-bottom: 5px;
+}
+
+.show-name {
+  padding-bottom: 10px;
+}
+
+.show-item button {
+  line-height: 1.5;
+  width: 65%;
+  font-size: 12px;
+}
+
+.hot-container {
+  padding: 10px 0 10px 0;
+}
+
+.hot-item {
+  flex: 1 1 auto;
+}
+
+.hot-item image {
+  display: block;
+  width: 70%;
+  height: 100px;
+  margin: 0 auto;
+  padding-bottom: 5px;
+}
+
+.show-name, .hot-name {
+  padding-bottom: 10px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  width: 75px;
+}
+
+.dou-container.null text {
+  padding: 10px 0;
+}
+
+.pop-container {
+  padding-bottom: 0;
+}
+
+.pop-item {
+  width: 90%;
+  padding: 15px 0 0;
+  margin: 0 auto;
+}
+
+.pop-item-flex {
+  width: 100%;
+  display: flex;
+}
+
+.pop-item-flex image {
+  width: 70px;
+  height: 95px;
+  margin-bottom: 15px;
+}
+
+.pop-text {
+  width: 225px;
+  padding-left: 15px;
+}
+
+.pop-des {
+  line-height: 1.25;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+}
+
+.pop-title {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 225px;
+  display: block;
+  padding-bottom: 15px;
+}
+
+.pop-review {
+  padding: 0 0 15px 0;
+  border-bottom: 1px solid #f2f2f2;
+}
+
+.advertise-container {
+  width: 95%;
+  margin: 0 auto;
+}
+
+#advertise {
+  padding: 10px 0 25px;
+}
+
+.advertise-container image {
+  width: 100%;
+  height: 115px;
+}

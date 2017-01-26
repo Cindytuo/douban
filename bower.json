@@ -1,0 +1,21 @@
+{
+  "name": "douban",
+  "authors": [
+    "Liutiwnen <liutianwen984@pingan.com.cn>"
+  ],
+  "description": "weixin douban app",
+  "main": "",
+  "keywords": [
+    "weixin",
+    "app"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

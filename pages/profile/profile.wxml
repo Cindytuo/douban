@@ -1,0 +1,5 @@
+<view id="profile" class="flex flex-direction-col flex-vertical-center flex-horizontal-between">
+    <image id="userAvatar" class="" src="{{userInfo.avatarUrl}}"></image>
+    <view id="userNickName" class="center text-center">{{userInfo.nickName}}</view>
+    <view class="center text-center">{{connect}}</view>
+</view>
