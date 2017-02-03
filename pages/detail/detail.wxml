@@ -38,7 +38,7 @@
                     <view class="movie-link-btn flex flex-horizontal-between flex-vertical-center">
                         <text class="large-text">影片信息与简介</text>
                         <button plain="{{true}}">
-                            <image class="arrow-right" mode="aspectFill"/>
+                            <image class="arrow-right" mode="aspectFill"></image>
                         </button>
                     </view>
                 </view>
@@ -52,7 +52,7 @@
                 <text class="prevue-num">({{trailer_urls.length}})</text>
             </text>
             <button plain="{{true}}">
-                <image class="arrow-right" mode="aspectFill"/>
+                <image class="arrow-right" mode="aspectFill"></image>
             </button>
         </view>
         <view class="prevue-index relative clearfix">
@@ -72,7 +72,7 @@
                 <text class="pictrue-num">(500)</text>
             </text>
             <button plain="{{true}}">
-                <image class="arrow-right" mode="aspectFill"/>
+                <image class="arrow-right" mode="aspectFill"></image>
             </button>
         </view>
         <view class="pictrue-body flex flex-horizontal-around">
@@ -88,7 +88,7 @@
                 <text class="comment-num">({{commentsCount}})</text>
             </text>
             <button plain="{{true}}">
-                <image class="arrow-right" mode="aspectFill"/>
+                <image class="arrow-right" mode="aspectFill"></image>
             </button>
         </view>
         <swiper id="commentSwiper" class="comment-swiper">
@@ -181,7 +181,7 @@
                 <text class="question-num">(367671)</text>
             </text>
             <button plain="{{true}}">
-                <image class="arrow-right" mode="aspectFill"/>
+                <image class="arrow-right" mode="aspectFill"></image>
             </button>
         </view>
         <view class="question-container">
@@ -210,7 +210,7 @@
                 <text class="watching-num">({{doCount}})</text>
             </text>
             <button plain="{{true}}">
-                <image class="arrow-right" mode="aspectFill"/>
+                <image class="arrow-right" mode="aspectFill"></image>
             </button>
         </view>
         <view class="watching-container">

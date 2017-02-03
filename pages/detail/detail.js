@@ -20,6 +20,7 @@ var Para = {
     question: load,
     doCount: load
 };
+
 Page({
     /*页面初始数据*/
     data: Para,

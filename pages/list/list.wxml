@@ -4,7 +4,7 @@
         <view class="button-container">
             <text class="show-title large-text">正在热映</text>
             <button plain="{{true}}">
-                <image class="arrow-right" mode="aspectFill"/>
+                <image class="arrow-right" mode="aspectFill"></image>
             </button>
         </view>
         <view class="show-container list-view-container flex-horizontal-between">
@@ -23,7 +23,7 @@
         <view class="button-container">
             <text class="show-title large-text">近期热门</text>
             <button plain="{{true}}">
-                <image class="arrow-right" mode="aspectFill"/>
+                <image class="arrow-right" mode="aspectFill"></image>
             </button>
         </view>
         <view class="hot-container list-view-container flex-horizontal-between">
@@ -39,7 +39,7 @@
         <view class="button-container">
             <text class="show-title large-text">热门豆列</text>
             <button plain="{{true}}">
-                <image class="arrow-right" mode="aspectFill"/>
+                <image class="arrow-right" mode="aspectFill"></image>
             </button>
         </view>
         <view class="dou-container  list-view-container null">
@@ -50,7 +50,7 @@
         <view class="button-container">
             <text class="show-title large-text">最受欢迎的影评</text>
             <button plain="{{true}}">
-                <image class="arrow-right" mode="aspectFill"/>
+                <image class="arrow-right" mode="aspectFill"></image>
             </button>
         </view>
         <view class="pop-container list-view-container flex-direction-col" >
