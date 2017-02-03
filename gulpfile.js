@@ -49,7 +49,7 @@ gulp.task('common', ()=> {
 gulp.task('images', ()=> {
     return gulp.src('images/**/*.*')
         .pipe(plugins.imagemin())
-        .pipe(gulp.dest(`${distDir}/images`))
+        .pipe(gulp.dest(`${distDir}/images`));
 });
 
 gulp.task('components', ()=> {
@@ -65,6 +65,12 @@ gulp.task('components', ()=> {
     return streamqueue({objectMode: true}, scriptStream, wxssStream)
         .pipe(gulp.dest(`${distDir}/components`))
         .on('error', errorHandler);
+});
+
+gulp.task('util', ()=> {
+    return gulp.src('util/**/*.js')
+        .pipe(plugins.uglify())
+        .pipe(gulp.dest(`${distDir}/util`));
 });
 
 gulp.task('app', ()=> {
@@ -84,7 +90,19 @@ gulp.task('app', ()=> {
         .on('error', errorHandler);
 });
 
-
 gulp.task('build', ()=> {
-    runSequence('clean', 'pages', 'common', 'components', 'images', 'app');
+    runSequence('clean', 'pages', 'common', 'components', 'images', 'util', 'app');
+});
+
+gulp.task('watch', ()=> {
+    gulp.watch('pages/**/*.*', ['pages']);
+    gulp.watch('common/**/*.js', ['common']);
+    gulp.watch('components/**/*.*', ['components']);
+    gulp.watch('images/**/*.*', ['images']);
+    gulp.watch('util/**/*.*', ['util']);
+    gulp.watch('app.*', ['app']);
+});
+
+gulp.task('default', ()=> {
+    runSequence('clean', 'pages', 'common', 'components', 'images', 'util', 'app', 'watch');
 });
