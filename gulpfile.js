@@ -82,7 +82,7 @@ gulp.task('app', ()=> {
     return streamqueue({objectMode: true}, scriptStream, wxssStream, jsonStream)
         .pipe(gulp.dest(`${distDir}`))
         .on('error', errorHandler);
-})
+});
 
 
 gulp.task('build', ()=> {
