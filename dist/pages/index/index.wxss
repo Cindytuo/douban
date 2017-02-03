@@ -1,1 +1,0 @@
-#container,#splash,page{height:100%}#container{display:block}#splash .slide-image{height:100%;width:100%}#startArea{display:flex;display:-webkit-flex;position:absolute;bottom:0;width:100%;align-items:center;justify-content:center;opacity:0;transition:all 1.5s ease-in-out;-webkit-transition:all 1.5s ease-in-out}#startArea.active{bottom:65px;opacity:1}#start{opacity:.5}
