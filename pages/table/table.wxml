@@ -1,0 +1,24 @@
+<view id="table">
+<scroll-view scroll-y="true">
+    <block wx:for="{{subjects}}" wx:key="*this" wx:for-index="index">
+    <navigator url="../detail/detail?id={{item.id}}" class="table-item flex" bindtap="flow" id="{{item.id}}">
+        <image class="table-image" src="{{item.images.small}}"></image>
+        <view class="table-des">
+            <view class="table-des-head">
+            	<text class="super-text">{{item.title}}</text>
+            	<text class="gray-1 small-text sub-head">/{{item.original_title}}</text>
+            </view>
+            <view class="table-des-body large-text">
+            	<block wx:for="{{item.directors}}" wx:key="*this" wx:for-index="idsdir" wx:for-item="director">
+            		{{director.name}}(导演)
+            	</block>
+            	<block wx:for="{{item.casts}}" wx:key="*this" wx:for-index="idscat" wx:for-item="cast">
+            		{{cast.name}}
+            		<block wx:if="{{idscat != item.casts.length - 1}}">/</block>
+            	</block>
+            </view>
+        </view>
+    </navigator>
+    </block>
+</scroll-view>
+</view>

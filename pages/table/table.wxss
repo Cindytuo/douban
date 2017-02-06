@@ -1,0 +1,24 @@
+.table-item {
+	padding:5% 2%;
+	border-bottom: 1px solid #eee;
+}
+
+.table-image {
+	width:30%;
+	height:150px;
+}
+.table-des {
+	width:65%;
+	padding-left: 3%;
+}
+.table-des-body {
+	padding-top: 3%;
+	line-height: 1.5;
+}
+.sub-head {
+	width:70px;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	display: inline-block;
+	overflow: hidden;
+}
