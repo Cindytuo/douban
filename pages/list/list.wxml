@@ -1,12 +1,12 @@
 
 <view id="list">
     <view id="showing">
-        <view class="button-container">
+        <navigator class="button-container" url="../table/table?tableType=showing">
             <text class="show-title large-text">正在热映</text>
             <button plain="{{true}}">
                 <image class="arrow-right" mode="aspectFill"></image>
             </button>
-        </view>
+        </navigator>
         <view class="show-container list-view-container flex-horizontal-between">
             <block wx:for="{{showing}}" wx:key="*this" wx:for-index="index">
                 <view class="show-item" bindtap="flow" id="{{item.id}}" data-name="show-item">
@@ -20,12 +20,12 @@
         </view>
     </view>
     <view id="hoting">
-        <view class="button-container">
+        <navigator class="button-container" url="../table/table?tableType=hoting">
             <text class="show-title large-text">近期热门</text>
             <button plain="{{true}}">
                 <image class="arrow-right" mode="aspectFill"></image>
             </button>
-        </view>
+        </navigator>
         <view class="hot-container list-view-container flex-horizontal-between">
             <block wx:for="{{hoting}}" wx:key="*this" wx:for-index="index">
                 <view class="hot-item" id="{{item.id}}" data-name="show-item" bindtap="flow">
