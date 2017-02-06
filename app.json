@@ -1,13 +1,15 @@
 {
   "pages": [
+    "pages/table/table",
     "pages/list/list",
+    "pages/detail/detail",
     "pages/index/index",
-    "pages/profile/profile",
-    "pages/detail/detail"
+    "pages/profile/profile"
   ],
   "window": {
     "navigationBarTitleText": "豆瓣电影",
-    "navigationBarBackgroundColor": "#036bc4"
+    "navigationBarBackgroundColor": "#036bc4",
+    "enablePullDownRefresh": true
   },
   "networkTimeout": {
     "request": 10000,
