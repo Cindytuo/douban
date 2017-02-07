@@ -19,9 +19,7 @@ gulp.task('clean', ()=> {
 
 gulp.task('pages', ()=> {
     let scriptStream = gulp.src('pages/**/*.js')
-        .pipe(plugins.babel({
-            presets: ['es2015']
-        }))
+        .pipe(plugins.babel())
         .pipe(plugins.uglify());
 
     let wxssStream = gulp.src('pages/**/*.wxss')
@@ -39,9 +37,7 @@ gulp.task('pages', ()=> {
 
 gulp.task('common', ()=> {
     return gulp.src('common/**/*.js')
-        .pipe(plugins.babel({
-            presets: ['es2015']
-        }))
+        .pipe(plugins.babel())
         .pipe(plugins.uglify())
         .pipe(gulp.dest(`${distDir}/common`));
 });
@@ -54,9 +50,7 @@ gulp.task('images', ()=> {
 
 gulp.task('components', ()=> {
     let scriptStream = gulp.src('components/**/*.js')
-        .pipe(plugins.babel({
-            presets: ['es2015']
-        }))
+        .pipe(plugins.babel())
         .pipe(plugins.uglify());
 
     let wxssStream = gulp.src('components/**/*.wxss')
@@ -75,9 +69,7 @@ gulp.task('util', ()=> {
 
 gulp.task('app', ()=> {
     let scriptStream = gulp.src('app.js')
-        .pipe(plugins.babel({
-            presets: ['es2015']
-        }))
+        .pipe(plugins.babel())
         .pipe(plugins.uglify());
 
     let wxssStream = gulp.src('app.wxss')
