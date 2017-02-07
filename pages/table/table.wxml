@@ -1,6 +1,6 @@
 <view id="table">
-<scroll-view scroll-y="true">
-    <block wx:for="{{subjects}}" wx:key="*this" wx:for-index="index">
+<scroll-view scroll-y="true" style="height:100%;" bindscrolltolower="infiniteLower">
+    <block wx:for="{{subjects}}" wx:for-index="index">
     <navigator url="../detail/detail?id={{item.id}}" class="table-item flex" bindtap="flow" id="{{item.id}}">
         <image class="table-image" src="{{item.images.small}}"></image>
         <view class="table-des">
@@ -9,10 +9,10 @@
             	<text class="gray-1 small-text sub-head">/{{item.original_title}}</text>
             </view>
             <view class="table-des-body large-text">
-            	<block wx:for="{{item.directors}}" wx:key="*this" wx:for-index="idsdir" wx:for-item="director">
+            	<block wx:for="{{item.directors}}" wx:for-index="idsdir" wx:for-item="director">
             		{{director.name}}(导演)
             	</block>
-            	<block wx:for="{{item.casts}}" wx:key="*this" wx:for-index="idscat" wx:for-item="cast">
+            	<block wx:for="{{item.casts}}" wx:for-index="idscat" wx:for-item="cast">
             		{{cast.name}}
             		<block wx:if="{{idscat != item.casts.length - 1}}">/</block>
             	</block>
@@ -20,5 +20,8 @@
         </view>
     </navigator>
     </block>
+    <view id="noInfinite" class="noInfinite {{noInfiniteShow}}">
+    	<text class="small-text text-center">目前就这些电影了哦,亲~~</text>
+    </view>
 </scroll-view>
 </view>

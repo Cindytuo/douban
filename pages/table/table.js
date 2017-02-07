@@ -3,55 +3,34 @@ const global = app.globalData;
 const service = require('../../common/service');
 const Promise = require('../../util/es6-promise.min').Promise;
 const load = global.load;
-var page = 1;
-var param = {
+var count = 10;
 
+var page = {};
+
+var params = {
+    city:'上海',
+    start: 0,
+    count: count
 }
 var Model = {
-    subjects:[]
+    subjects:[],
+    noInfinite:true,
+    noInfiniteShow: ''
 };
 
 Page({
     /*页面初始数据*/
     data: Model,
     onLoad: function (param) {
-        console.log(param);
-        param.tableType = 'showing';
-        if(param.tableType == 'showing'){
-            let params = {
-                city: '上海',
-                start: 0,
-                count: 10
-            };
-            service.getIntheaters(params)
-                .success((response)=>{
-                    console.log(response);
-                    this.setData({
-                        subjects:response.data.subjects
-                    });
-                })
-                .error((error)=>{
-                    console.log(error);
-                });
+        params.tableType = param.tableType;
+        if(!page[params.tableType]){
+            page[params.tableType] = 0;
         }
-
-        if(param.tableType == 'hoting'){
-            let params = {
-                city: '上海',
-                start: 0,
-                count: 10
-            };
-            service.getTop(params)
-                .success((response)=>{
-                    console.log(response);
-                    this.setData({
-                        subjects:response.data.subjects
-                    });
-                })
-                .error((error)=>{
-                    console.log(error);
-                });
-        }
+        params.start = page[params.tableType];
+        console.log(page);
+        this.renderList(params,function(){
+            console.log('目前没有上映的电影哦，亲~~');
+        });
     },
     onReady: function () {
 
@@ -72,8 +51,7 @@ Page({
     onPullDownRefresh: function () {
     },
     /*监听用户上拉触底*/
-    onReachBottom: function (param) {
-        param.tableType = 'showing';
+    onReachBottom: function () {
     },
     /*用户点击右上角分享*/
     onShareAppMessage: function () {
@@ -82,5 +60,54 @@ Page({
     flow: function (e) {
         console.log(e);
         console.log(e.currentTarget);
+    },
+    infiniteLower: function (e) {
+        page[params.tableType] = count + page[params.tableType];
+        params.start = page[params.tableType];
+        this.renderList(params,function(){
+            this.setData({
+                noInfiniteShow:'show'
+            });
+            page[params.tableType] = page[params.tableType] - count;
+        });
+    },
+    renderList: function (params,fn) {
+        let _params = {
+            city:'上海',
+            start: params.start,
+            count: params.count
+        };
+
+        if(params.tableType == 'showing'){
+            service.getIntheaters(_params)
+                .success((response)=>{
+                    console.log(response);
+                    if(response&&response.data&&response.data.subjects.length){
+                        this.setData({
+                            subjects:this.data.subjects.concat(response.data.subjects)
+                        });
+                    }else{
+                        fn.call(this);
+                    }
+                })
+                .error((error)=>{
+                    console.log(error);
+                });
+        }
+        if(params.tableType == 'hoting'){
+            service.getTop(_params)
+                .success((response)=>{
+                    if(response&&response.data&&response.data.subjects.length){
+                        this.setData({
+                            subjects:this.data.subjects.concat(response.data.subjects)
+                        });
+                    }else{
+                        fn.call(this);
+                    }
+                })
+                .error((error)=>{
+                    console.log(error);
+                });
+        }
     }
 })

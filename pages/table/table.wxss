@@ -1,3 +1,9 @@
+page {
+	height:100%;
+}
+#table {
+	height:100%;
+}
 .table-item {
 	padding:5% 2%;
 	border-bottom: 1px solid #eee;
@@ -21,4 +27,25 @@
 	white-space: nowrap;
 	display: inline-block;
 	overflow: hidden;
+}
+
+#noInfinite {
+	height:45px;
+	display: table;
+	width:100%;
+	transition: all 0.5s ease 1s;
+	-webkit-transition: all 0.5s ease 1s;
+	transform-origin: center bottom;
+	-webkit-transform-origin: center bottom;
+	transform: scale(1,0);
+	-webkit-transform: scale(1,0);
+}
+
+#noInfinite.show{
+	transform: scale(1,1);
+	-webkit-transform: scale(1,1);
+}
+#noInfinite text{
+	display: table-cell;
+	vertical-align:middle;
 }
