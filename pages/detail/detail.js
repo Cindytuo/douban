@@ -1,7 +1,6 @@
-const app = getApp();
 const global = getApp().globalData;
-const service = require('../../common/service');
-const Promise = require('../../util/es6-promise.min').Promise;
+const Promise = global.promise;
+const service = global.service;
 const load = global.load;
 var Para = {
     movieNameEng: load,

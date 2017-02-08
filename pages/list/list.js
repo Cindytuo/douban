@@ -1,7 +1,6 @@
-const app = getApp();
-const global = app.globalData;
-const service = require('../../common/service');
-const Promise = require('../../util/es6-promise.min').Promise;
+const global = getApp().globalData;
+const Promise = global.promise;
+const service = global.service;
 const load = global.load;
 const ctrlConfig = {
     drawStar: function(star) {

@@ -1,5 +1,5 @@
-const wc = require('../../common/wechat');
-const ts = require('../../common/test');
+const global = getApp().globalData;
+const wc = global.wechat;
 Page({
     /*页面初始数据*/
     data: {

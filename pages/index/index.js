@@ -1,6 +1,6 @@
-const app = getApp();
 const global = getApp().globalData;
-const service = require('../../common/service');
+const Promise = global.promise;
+const service = global.service;
 const load = global.load;
 const pageConfig = {
     startData: {
@@ -13,7 +13,6 @@ const pageConfig = {
         posterUrl: []
     },
     posterInit: function() {
-        console.log(service);
         service.getIntheaters({
                 city: '上海',
                 start: 0,
