@@ -23,7 +23,7 @@ Page({
     data: Model,
     onLoad: function(param) {
         params.tableType = param.tableType;
-        if (!page[params.tableType]) {
+        if (!page[params.tableType]||params.tableType == 'showing') {
             page[params.tableType] = 0;
         }
         params.start = page[params.tableType];
