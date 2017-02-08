@@ -1,19 +1,19 @@
 page {
-  height: 100%;
-  display:flex;
-  align-items: center !important;
-  justify-content: center !important;
+    height: 100%;
+    display: flex;
+    align-items: center !important;
+    justify-content: center !important;
 }
 
 #profile {
-  height: 50%;
+    height: 50%;
 }
 
 #userAvatar {
-  width: 200px;
-  height: 200px;
+    width: 200px;
+    height: 200px;
 }
 
 #userNickName {
-  color: #999999;
+    color: #999999;
 }

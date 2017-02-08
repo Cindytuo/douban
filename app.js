@@ -1,21 +1,21 @@
 App({
-    onLaunch: function () {
+    onLaunch: function() {
         console.log('onLaunch');
         // Do something initial when launch.
     },
-    onShow: function () {
+    onShow: function() {
         console.log('onShow');
         // Do something when show.
     },
-    onHide: function () {
+    onHide: function() {
         console.log('onHide');
         // Do something when hide.
     },
-    onError: function (msg) {
+    onError: function(msg) {
         console.log(msg)
     },
     globalFunc: {
-        drawStar: function (value) {
+        drawStar: function(value) {
             let starsNum = Math.round(value / 5);
             let starsArray = [];
             starsArray.length = starsNum;

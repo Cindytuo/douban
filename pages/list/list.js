@@ -4,10 +4,10 @@ const service = require('../../common/service');
 const Promise = require('../../util/es6-promise.min').Promise;
 const load = global.load;
 const ctrlConfig = {
-    drawStar: function (star) {
+    drawStar: function(star) {
         /*draw stars*/
     },
-    random: function (min = 0, max = 100) {
+    random: function(min = 0, max = 100) {
         return parseInt(Math.random() * max + min);
     }
 };
@@ -23,7 +23,7 @@ Page({
     /*页面初始数据*/
     data: Model,
 
-    onLoad: function () {
+    onLoad: function() {
         let douList = [];
         let adver = '';
         let showModel = {
@@ -54,7 +54,7 @@ Page({
             service.getIntheaters(intheatersParams),
             service.getTop(topParams),
             service.getReviews()
-        ]).then((response)=> {
+        ]).then((response) => {
             console.log(response);
             let showList = response[0].data.subjects;
             let hotList = response[1].data.subjects;
@@ -64,43 +64,43 @@ Page({
                 hoting: hotList,
                 popular: popular
             });
-        }).catch((error)=> {
+        }).catch((error) => {
             console.log(error);
         });
         ctrlConfig.drawStar(popularModel.star);
     },
-    onReady: function () {
+    onReady: function() {
 
     },
     /*监听页面显示*/
-    onShow: function () {
+    onShow: function() {
 
     },
     /*监听页面隐藏*/
-    onHide: function () {
+    onHide: function() {
 
     },
     /*监听页面卸载*/
-    onUnload: function () {
+    onUnload: function() {
 
     },
     /*监听用户下拉动作*/
-    onPullDownRefresh: function () {
+    onPullDownRefresh: function() {
 
     },
     /*监听用户上拉触底*/
-    onReachBottom: function () {
+    onReachBottom: function() {
 
     },
     /*用户点击右上角分享*/
-    onShareAppMessage: function () {
+    onShareAppMessage: function() {
 
     },
-    flow: function (e) {
+    flow: function(e) {
         let cTarget = e.currentTarget;
         let target = e.target;
-        console.log({cTarget: cTarget});
-        console.log({Target: target});
+        console.log({ cTarget: cTarget });
+        console.log({ Target: target });
         if (target.dataset.name == 'show-btn') {
             console.log('dingpiao');
             return;

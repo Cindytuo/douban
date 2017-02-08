@@ -1,104 +1,104 @@
 .small-text {
-  font-size: 12px !important;
+    font-size: 12px !important;
 }
 
 .large-text {
-  font-size: 14px !important;
+    font-size: 14px !important;
 }
 
 .super-text {
-  font-size: 16px !important;
+    font-size: 16px !important;
 }
 
 .center {
-  margin: 0 auto !important;
+    margin: 0 auto !important;
 }
 
 .text-center {
-  text-align: center !important;
+    text-align: center !important;
 }
 
 .text-right {
-  text-align: right !important;
+    text-align: right !important;
 }
 
 .none {
-  display: none !important;
+    display: none !important;
 }
 
 .block {
-  display: block;
+    display: block;
 }
 
 .relative {
-  position: relative !important;
+    position: relative !important;
 }
 
 .absolute {
-  position: absolute !important;
+    position: absolute !important;
 }
 
 .flex {
-  display: flex;
+    display: flex;
 }
 
 .flex-direction-col {
-  flex-direction: column !important;
+    flex-direction: column !important;
 }
 
 .flex-direction-row {
-  flex-direction: row !important;
+    flex-direction: row !important;
 }
 
 .flex-horizontal-around {
-  justify-content: space-around !important;
+    justify-content: space-around !important;
 }
 
 .flex-horizontal-between {
-  justify-content: space-between !important;
+    justify-content: space-between !important;
 }
 
 .flex-vertical-center {
-  align-items: center !important;
+    align-items: center !important;
 }
 
 .flex-vertical-between {
-  align-items: space-between !important;
+    align-items: space-between !important;
 }
 
 .flex-vertical-around {
-  align-items: space-around !important;
+    align-items: space-around !important;
 }
 
 .float-left {
-  float: left !important;
+    float: left !important;
 }
 
 .float-right {
-  float: right !important;
+    float: right !important;
 }
 
 .clear-left {
-  clear: left;
+    clear: left;
 }
 
 .clear-both {
-  clear: both;
+    clear: both;
 }
 
 .clear-right {
-  clear: right;
+    clear: right;
 }
 
 .clearfix {
-  overflow: auto;
+    overflow: auto;
 }
 
 button {
-  white-space: nowrap;
-  text-overflow: ellipsis;
+    white-space: nowrap;
+    text-overflow: ellipsis;
 }
 
 .gray-1 {
-  color:#999;
+    color: #999;
 }

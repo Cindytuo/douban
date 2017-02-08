@@ -25,56 +25,56 @@ Page({
     /*页面初始数据*/
     data: Para,
 
-    onLoad: function (param) {
+    onLoad: function(param) {
         service.getOneSubject(param)
-            .success((response)=> {
+            .success((response) => {
                 let data = response.data;
                 console.log(data);
                 this.setData({
                     movieNameEng: data.original_title,
                     movieNameChi: data.title,
                     movieStar: data.rating.average,
-                    preVue: data.trailer_urls,//array
+                    preVue: data.trailer_urls, //array
                     people: data.wish_count,
                     time: data.mainland_pubdate ? data.mainland_pubdate : `${data.year}年`,
                     directors: data.directors,
-                    actor: data.casts,//array
-                    type: data.genres,//array
-                    pictrue: data.images,//array
+                    actor: data.casts, //array
+                    type: data.genres, //array
+                    pictrue: data.images, //array
                     commentsCount: data.comments_count,
-                    photos: data.photos,//array
+                    photos: data.photos, //array
                     doCount: data.do_count
                 });
             })
-            .error((error)=> {
+            .error((error) => {
                 console.log(error);
             });
     },
-    onReady: function () {
+    onReady: function() {
 
     },
     /*监听页面显示*/
-    onShow: function () {
+    onShow: function() {
 
     },
     /*监听页面隐藏*/
-    onHide: function () {
+    onHide: function() {
 
     },
     /*监听页面卸载*/
-    onUnload: function () {
+    onUnload: function() {
 
     },
     /*监听用户下拉动作*/
-    onPullDownRefresh: function () {
+    onPullDownRefresh: function() {
 
     },
     /*监听用户上拉触底*/
-    onReachBottom: function () {
+    onReachBottom: function() {
 
     },
     /*用户点击右上角分享*/
-    onShareAppMessage: function () {
+    onShareAppMessage: function() {
 
     }
 })

@@ -1,238 +1,237 @@
 @import "../../components/components.wxss";
-
 page {
-  background: #f2f2f2;
+    background: #f2f2f2;
 }
 
 .purchase {
-  padding: 15px 0;
-  background: #fff;
+    padding: 15px 0;
+    background: #fff;
 }
 
 .purchase-text {
-  align-items: center;
+    align-items: center;
 }
 
 .purchase-btn {
-  margin: 0;
-  background: #036bc4;
-  color: #fff;
-  width: 100px;
+    margin: 0;
+    background: #036bc4;
+    color: #fff;
+    width: 100px;
 }
 
 .detail {
-  padding-top: 15px;
+    padding-top: 15px;
 }
 
 .poster image {
-  border: 10px solid #fff;
-  width: 156px;
-  margin: 0 auto;
-  display: block;
-  margin-bottom: 15px;
+    border: 10px solid #fff;
+    width: 156px;
+    margin: 0 auto;
+    display: block;
+    margin-bottom: 15px;
 }
 
 .movie-name {
-  width: 75%;
-  margin: 0 auto;
-  line-height: 1.5;
-  padding: 5px 15px 5px;
+    width: 75%;
+    margin: 0 auto;
+    line-height: 1.5;
+    padding: 5px 15px 5px;
 }
 
 .movie-star {
-  width: 60%;
-  margin: 0 auto;
-  padding: 5px 15px 5px;
+    width: 60%;
+    margin: 0 auto;
+    padding: 5px 15px 5px;
 }
 
 .movie-valuer-star {
-  color: #df5001;
+    color: #df5001;
 }
 
 .movie-valuer-num {
-  color: #006ae2;
+    color: #006ae2;
 }
 
 .movie-makers {
-  width: 80%;
-  padding: 5px 15px 5px;
-  margin: 0 auto;
-  color: #006ae2;
-  line-height: 1.5;
+    width: 80%;
+    padding: 5px 15px 5px;
+    margin: 0 auto;
+    color: #006ae2;
+    line-height: 1.5;
 }
 
 .movie-type {
-  padding: 5px 15px 5px;
+    padding: 5px 15px 5px;
 }
 
 .movie-time {
-  padding: 5px 15px 5px;
+    padding: 5px 15px 5px;
 }
 
 .movie-btn {
-  margin: 0 auto;
-  width: 180px;
+    margin: 0 auto;
+    width: 180px;
 }
 
 .movie-link {
-  padding: 15px 5px 5px;
+    padding: 15px 5px 5px;
 }
 
 .movie-btn button {
-  width: 80px;
-  height: 30px;
+    width: 80px;
+    height: 30px;
 }
 
 .movie-link-btn {
-  background: #fff;
-  border-radius: 5px;
+    background: #fff;
+    border-radius: 5px;
 }
 
 .movie-link-btn text {
-  padding-left: 15px;
+    padding-left: 15px;
 }
 
 .movie-link-btn button {
-  margin: 0;
-  border: 0;
-  padding: 0;
+    margin: 0;
+    border: 0;
+    padding: 0;
 }
 
 .prevue-index {
-  background: #fff;
-  padding: 15px 15px 5px;
-  margin: 0 5px;
-  border-radius: 5px;
+    background: #fff;
+    padding: 15px 15px 5px;
+    margin: 0 5px;
+    border-radius: 5px;
 }
 
 .prevue-video-link {
-  width: 50px;
-  height: 50px;
-  background: url(../../images/play-btn.png) center center no-repeat;
-  background-size: cover;
-  left: 22.5%;
-  margin-left: -20px;
-  top: 50%;
-  margin-top: -20px;
+    width: 50px;
+    height: 50px;
+    background: url(../../images/play-btn.png) center center no-repeat;
+    background-size: cover;
+    left: 22.5%;
+    margin-left: -20px;
+    top: 50%;
+    margin-top: -20px;
 }
 
 .show-title {
-  padding-left: 5px;
+    padding-left: 5px;
 }
 
 .prevue-poster {
-  width: 45%;
-  height: 90px;
+    width: 45%;
+    height: 90px;
 }
 
 .prevue-text {
-  padding-left: 10px;
-  width: 45%;
+    padding-left: 10px;
+    width: 45%;
 }
 
 .prevue-name {
-  padding-bottom: 15px;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  overflow: hidden;
+    padding-bottom: 15px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
 }
 
 .prevue-time {
-  padding: 5px 0;
+    padding: 5px 0;
 }
 
 .prevue-response-num {
-  padding: 5px 0;
+    padding: 5px 0;
 }
 
 .pictrue-body {
-  background: #fff;
-  border-radius: 5px;
-  padding: 15px 0;
-  margin: 0 5px;
+    background: #fff;
+    border-radius: 5px;
+    padding: 15px 0;
+    margin: 0 5px;
 }
 
 .pictrue-body image {
-  width: 60px;
-  height: 60px;
+    width: 60px;
+    height: 60px;
 }
 
 #commentSwiper {
-  margin: 0 2.5px;
+    margin: 0 2.5px;
 }
 
 #commentSwiper .swiper-item-container {
-  border-radius: 5px;
-  margin: 0 2.5px;
-  padding: 10px 15px;
-  background: #fff;
+    border-radius: 5px;
+    margin: 0 2.5px;
+    padding: 10px 15px;
+    background: #fff;
 }
 
 .comment-text {
-  height: 80px;
-  border-bottom: 1px solid #f2f2f2;
+    height: 80px;
+    border-bottom: 1px solid #f2f2f2;
 }
 
 .comment-user {
-  padding: 15px 0;
+    padding: 15px 0;
 }
 
 .comment-user-pic {
-  width: 30px;
-  height: 30px;
+    width: 30px;
+    height: 30px;
 }
 
 .comment-user-body {
-  padding-left: 10px;
+    padding-left: 10px;
 }
 
 .comment-response {
-  padding-top: 5px;
+    padding-top: 5px;
 }
 
 .question-container {
-  background: #fff;
-  margin: 0 5px;
-  padding: 0 15px;
+    background: #fff;
+    margin: 0 5px;
+    padding: 0 15px;
 }
 
 .question-item {
-  padding: 10px 0;
-  border-bottom: 1px solid #f2f2f2;
+    padding: 10px 0;
+    border-bottom: 1px solid #f2f2f2;
 }
 
 .question-title {
-  width: 60%;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
+    width: 60%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 #userWatching {
-  padding-bottom: 20px;
+    padding-bottom: 20px;
 }
 
 .watching-container {
-  background: #fff;
-  border-radius: 5px;
-  margin: 0 5px;
-  padding: 0 10px 0 15px;
+    background: #fff;
+    border-radius: 5px;
+    margin: 0 5px;
+    padding: 0 10px 0 15px;
 }
 
 .watching-item {
-  padding: 15px 0;
-  border-bottom: 1px solid #f2f2f2;
+    padding: 15px 0;
+    border-bottom: 1px solid #f2f2f2;
 }
 
 .watch-pic image {
-  width: 30px;
-  height: 30px;
+    width: 30px;
+    height: 30px;
 }
 
 .watch-text {
-  padding-left: 10px;
+    padding-left: 10px;
 }
 
 .watch-user {
-  padding-bottom: 5px;
+    padding-bottom: 5px;
 }

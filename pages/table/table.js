@@ -8,104 +8,102 @@ var count = 10;
 var page = {};
 
 var params = {
-    city:'上海',
+    city: '上海',
     start: 0,
     count: count
 }
 var Model = {
-    subjects:[],
-    noInfinite:true,
+    subjects: [],
+    noInfinite: true,
     noInfiniteShow: ''
 };
 
 Page({
     /*页面初始数据*/
     data: Model,
-    onLoad: function (param) {
+    onLoad: function(param) {
         params.tableType = param.tableType;
-        if(!page[params.tableType]){
+        if (!page[params.tableType]) {
             page[params.tableType] = 0;
         }
         params.start = page[params.tableType];
         console.log(page);
-        this.renderList(params,function(){
+        this.renderList(params, function() {
             console.log('目前没有上映的电影哦，亲~~');
         });
     },
-    onReady: function () {
+    onReady: function() {
 
     },
     /*监听页面显示*/
-    onShow: function () {
+    onShow: function() {
 
     },
     /*监听页面隐藏*/
-    onHide: function () {
+    onHide: function() {
 
     },
     /*监听页面卸载*/
-    onUnload: function () {
+    onUnload: function() {
 
     },
     /*监听用户下拉动作*/
-    onPullDownRefresh: function () {
-    },
+    onPullDownRefresh: function() {},
     /*监听用户上拉触底*/
-    onReachBottom: function () {
-    },
+    onReachBottom: function() {},
     /*用户点击右上角分享*/
-    onShareAppMessage: function () {
+    onShareAppMessage: function() {
 
     },
-    flow: function (e) {
+    flow: function(e) {
         console.log(e);
         console.log(e.currentTarget);
     },
-    infiniteLower: function (e) {
+    infiniteLower: function(e) {
         page[params.tableType] = count + page[params.tableType];
         params.start = page[params.tableType];
-        this.renderList(params,function(){
+        this.renderList(params, function() {
             this.setData({
-                noInfiniteShow:'show'
+                noInfiniteShow: 'show'
             });
             page[params.tableType] = page[params.tableType] - count;
         });
     },
-    renderList: function (params,fn) {
+    renderList: function(params, fn) {
         let _params = {
-            city:'上海',
+            city: '上海',
             start: params.start,
             count: params.count
         };
 
-        if(params.tableType == 'showing'){
+        if (params.tableType == 'showing') {
             service.getIntheaters(_params)
-                .success((response)=>{
+                .success((response) => {
                     console.log(response);
-                    if(response&&response.data&&response.data.subjects.length){
+                    if (response && response.data && response.data.subjects.length) {
                         this.setData({
-                            subjects:this.data.subjects.concat(response.data.subjects)
+                            subjects: this.data.subjects.concat(response.data.subjects)
                         });
-                    }else{
+                    } else {
                         fn.call(this);
                     }
                 })
-                .error((error)=>{
+                .error((error) => {
                     console.log(error);
                 });
         }
-        if(params.tableType == 'hoting'){
+        if (params.tableType == 'hoting') {
             service.getTop(_params)
-                .success((response)=>{
-                    if(response&&response.data&&response.data.subjects.length){
+                .success((response) => {
+                    if (response && response.data && response.data.subjects.length) {
                         this.setData({
-                            subjects:this.data.subjects.concat(response.data.subjects)
+                            subjects: this.data.subjects.concat(response.data.subjects)
                         });
-                    }else{
+                    } else {
                         fn.call(this);
                     }
                 })
-                .error((error)=>{
+                .error((error) => {
                     console.log(error);
                 });
         }

@@ -1,24 +1,27 @@
 /*通用icon*/
+
 .arrow-right {
-  width: 15px !important;
-  height: 15px !important;
-  background: url(../images/arrowright.png) center center no-repeat;
-  background-size: cover;
-  border: 0;
+    width: 15px !important;
+    height: 15px !important;
+    background: url(../images/arrowright.png) center center no-repeat;
+    background-size: cover;
+    border: 0;
 }
 
+
 /*通用标签栏*/
+
 .button-container {
-  display: flex;
-  align-item: center;
-  justify-content: space-between;
-  padding: 15px 5px 10px;
+    display: flex;
+    align-item: center;
+    justify-content: space-between;
+    padding: 15px 5px 10px;
 }
 
 .button-container button {
-  border: 0;
-  margin: 0;
-  padding: 0;
-  line-height: 1;
-  height: 15px;
+    border: 0;
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+    height: 15px;
 }
