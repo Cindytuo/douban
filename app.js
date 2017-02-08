@@ -23,6 +23,9 @@ App({
         }
     },
     globalData: {
-        load: '正在加载..'
+        load: '正在加载..',
+        service: require('./common/service'),
+        wechat: require('./common/wechat'),
+        promise: require('./util/es6-promise.min').Promise
     }
 })
