@@ -98,8 +98,6 @@ Page({
     flow: function(e) {
         let cTarget = e.currentTarget;
         let target = e.target;
-        console.log({ cTarget: cTarget });
-        console.log({ Target: target });
         if (target.dataset.name == 'show-btn') {
             console.log('dingpiao');
             return;
