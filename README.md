@@ -27,9 +27,9 @@ gulp build
 
 ```shell
     ├── dist/ 			# 打包编译后的目录 微信开发者工具只需要打开该目录，开发者不要对该文件夹进行直接编辑
-    ├── app.js			# 项目主逻辑
-    ├── app.json		# 项目主设置
-    ├── app.wxss		# 公共样式表
+    ├── app.js                  # 项目主逻辑
+    ├── app.json                # 项目主设置
+    ├── app.wxss                # 公共样式表
     └── pages/                  # 页面目录
         ├── index/                              # 首页轮播页目录
             ├── index.js                             # 首页逻辑
@@ -57,7 +57,7 @@ gulp build
      └── common/ 		#公用目录 存放所有页面与后端交互的模块
             ├── face.js		      # 豆瓣api模块
             ├── fake.js		      # 假数据模块
-	    ├── wechat.js	      # 用来请求豆瓣api的公用方法
+            ├── wechat.js	      # 用来请求豆瓣api的公用方法
             └── service.js	      # 微信SDK模块
  
 ```
