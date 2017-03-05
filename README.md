@@ -1,4 +1,4 @@
-# douban
+# Douban
 > 微信小程序 - 豆瓣电影列表 使用gulp构建，支持es6
 
 ## run
