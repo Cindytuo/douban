@@ -53,12 +53,12 @@ gulp build
             └── profile.wxss(*.sass *.less *.css)
      └── images/                                # 资源目录 存放图片以及多媒体文件 
      └── components/                            # 组件目录 存放自定义组件
-     └── util/                                  # 工具目录 存放自定义或类库
+     └── util/                                  # 工具目录 存放自定义工具或类库
      └── common/                                # 公用目录 存放所有页面与后端交互的模块
             ├── face.js                              # 豆瓣api模块
             ├── fake.js                              # 假数据模块
-            ├── wechat.js                            # 用来请求豆瓣api的公用方法
-            └── service.js                           # 微信SDK模块
+            ├── wechat.js                            # 微信SDK模块
+            └── service.js                           # 用来请求豆瓣api的公用方法
  
 ```
 
